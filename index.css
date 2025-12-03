@@ -12,9 +12,6 @@
     font-style: normal;
     font: optional;
 }
-*{
-    /* outline: 1px solid darkcyan; */
-}
 .reveal {
     opacity: 0;
     transform: translateY(40px);
