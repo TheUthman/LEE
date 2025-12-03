@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="AW.css">
+</head>
+<body>
+        <div class="container">
+            <div id="header-sentinel"></div>
+            <header class="header">
+            <nav class="header_content">
+                <img src="./Images/Logo-green.svg.svg" alt="" class="header_logo">
+                <button type="button" id="menu_button"><img src="./Images/menu.png" alt="">.</button>
+                <div class="links_box">
+                    <button type="button" id="x_button" ><img src="./Images/close.png" alt="">.</button>
+                    <ul class="links">
+                        <li><a href="./AW.html" class="link_item1"><span>•</span>HOME</a></li>
+                        <li><a href="" class="link_item">ABOUT LEE</a></li>
+                        <li><a href="" class="link_item">PODCAST</a></li>
+                    </ul>
+                    <ul class="links">
+                        <li><a href="" class="link_item">OUR AWARDS</a></li>
+                        <li><a href="" class="link_item">BLOG</a></li>
+                        <li><a href="" class="link_item">SHE SPEAKS AFRICA</a></li>
+                    </ul>
+                    <button type="button" class="header_button button gradient-border" id="header-button"><img src="./Images/SVG1.png" alt="">GET IN TOUCH</button>
+                </div>
+            </nav>
+        </header>
+        <div class="menu"></div>
+        <section class="hero_section section">
+            <div class="hero_content reveal reveal-left">
+                <h1 class="hero_title">Season 2 <br>
+                    The Visionary's Gambit
+                </h1>
+                <p class="hero_desc">The wait is over! Season 2 of our podcast has arrived, bringing a fresh surge of inspiration,
+engaging stories, and thought-provoking conversations. Dive into a new wave of content
+that promises to captivate and enlighten. Tune in now and join us on this exciting journey!
+                </p>
+                <div class="podcast">
+                    <p class="hero_subtext">Podcast available on:</p>
+                    <div class="podcasts_logos">
+                    <img src="./Images/Apple Podcast.png" data-src="./Images/Apple Podcast.png" alt="" class="podcast_logo">
+                    <img src="./Images/Google Podcasts.png" data-src="./Images/Google Podcast.png" alt="" class="podcast_logo">
+                    <img src="./Images/Spotify.png" data-src="./Images/Spotify.png" alt="" class="podcast_logo">
+                    <img src="./Images/Pocket Casts.png" data-src="./Images/Pocket Casts.png" alt="" class="podcast_logo">
+                    <img src="./Images/Player FM.png" data-src="./Images/PlayerFM.png" alt="" class="podcast_logo">
+                    <img src="./Images/Youtube.png" data-src="./Images/Youtube.png" alt="" class="podcast_logo">
+                    <img src="./Images/Audible.png" data-src="./Images/Audible.png" alt="" class="podcast_logo">
+                    <img src="./Images/Amazon Music.png" data-src="./Images/AmazonMusic.png" alt="" class="podcast_logo">
+                    <img src="./Images/Iono.png" data-src="./Images/Iono.png" alt="" class="podcast_logo">
+                    <img src="./Images/iHeart Radio.png" data-src="./Images/iHeart Radio.png" alt="" class="podcast_logo">
+                    <img src="./Images/Afripods.png" data-src="./Images/Afripods.png" alt="" class="podcast_logo">
+                    </div>
+                </div>
+                <img src="./Images/noun-double-arrow-down-1624568.png" data-src="./Images/noun-double-arrow-down-1624568.png" class="arrow" alt="">
+        </section>
+        <section class="section">
+            <div class="player_container">
+                    <div class="player reveal reveal-left">
+                        <div class="player_info">
+                            <h3 class="player_title">S2 E01 Vania Leles
+                            </h3>
+                            <p class="player_category">The Visionary's Gambit</p>
+                        </div>
+                        <div class="audio_player">
+                            <div class="aplayer">
+                                <audio id="audio" src="./Audio.mp3">
+                                </audio>
+                                <button type="button" class="skip-btn" id="backward-btn">-15</button>
+                                <button type="button" class="play-btn gradient-border" id="playBtn">.
+                                    <div class="triangle"></div>
+                                    <img src="./Images/PlayIcon.png" alt="" class="play-icon">
+                                </button>
+                                <button type="button" class="skip-btn" id="forward-btn">+15</button>
+                                <input placeholder="0" type="range" id="seek" value="0" min="0" max="100">
+                                <div class="player2">
+                                    <p id="time"><span id="current_time">0:00</span> &nbsp; / <span id="duration">&nbsp;3:00</span>
+                                </p>
+                                <div class="volume-container">
+                                    <button class="volume-btn" id="volBtn">.
+                                        <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="64" height="64" fill="none"/>
+                                            <path d="M16 24v16h12l12 12V12L28 24H16z" fill="#000"/>
+                                            <path d="M44 20c2.7 2.7 4 6.3 4 10s-1.3 7.3-4 10" stroke="#000" stroke-width="2" fill="none"/>
+                                            <path d="M48 16c4 4 6 9.3 6 14s-2 10-6 14" stroke="#000" stroke-width="2" fill="none"/>
+                                        </svg>
+                                    </button>
+                                    <input placeholder="." type="range" id="volSlider" min="0" max="1" step="0.01" value="1">
+                                </div>
+                                <button type="button" class="skip-btn" id="repeat-btn">1x</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="platform-section reveal reveal-left">
+                    <img src="./Images/Platform 1 Section.png" data-src="./Images/Platform 1 Section.png" alt="" class="platform">
+                    <img src="./Images/Platform 2 Section.png" data-src="./Images/Platform 2 Section.png" alt="" class="platform">
+            </div>
+        </section>
+        <section class="section">
+            <div class="about_content">
+                    <div class="about_left reveal reveal-left">
+                        <h2 class="about_title">About LEE KASUMBA</h2>
+                        <p class="about_desc">
+                            Lee Nabunya Kasumba, a Pan-African creative strategist, embraces
+                            diverse African culture through her career in music, media, and popular
+                            culture. With Ugandan origins, South African upbringing, and Pan-
+                            African values, she champions excellence and upliftment. As a
+                            conversationalist and industry expert, she underscores her commitment
+                            to Africa’s rich talent and heritage.
+                        </p>
+                        <a href="">READ MORE ></a>
+                    </div>
+                    <div class="about_right reveal reveal-right">
+                        <img src="./Images/Lee-Kasumba.webp.png" data-src="./Images/Lee-Kasumba.webp.png" alt="">
+                    </div>
+                </div>
+        </section>
+        <section class="section">
+            <div class="episodes_section">
+                <div class="episides_head reveal reveal-left">
+                    <h2 class="episodes_header">Season 1 Episodes</h2>
+                </div>
+                <div class="more reveal reveal-left">
+                    <a href="">BROWSE ALL ></a>
+                    <div class="carousel_buttons">
+                        <button type="button" class="carousel-button gradient-border" id="carousel-button-prev"></button>
+                        <button type="button" class="carousel-button gradient-border" id="carousel-button-next"></button>
+                    </div>
+                </div>
+                <div class="carousel reveal reveal-right" id="carousel">
+                    <div class="episode_card">
+                        <img src="./Images/episode9.png" data-src="./Images/episode9.png" alt="">
+                        <div class="episode_details">
+                            <button class="e-playBtn gradient-border">
+                                <div class="e-triangle"></div>
+                            </button>
+                            <h3 class="episode_title">E09 Eric Kaduru</h3>
+                            <p class="chessmasters">Chess Masters</p>
+                            <p class="episode-metadata">September 20, 2023  Episode 9</p>
+                        </div>
+                    </div>
+                    <div class="episode_card">
+                        <img src="./Images/episode10.png" data-src="./Images/episode10.png" alt="">
+                        <div class="episode_details">
+                            <button class="e-playBtn gradient-border">
+                                <div class="e-triangle"></div>
+                            </button>
+                            <h3 class="episode_title">E10 Agnes Soyode-Johnson</h3>
+                            <p class="chessmasters">Chess Masters</p>
+                            <p class="episode-metadata">September 20, 2023  Episode 10</p>
+                        </div>
+                    </div>
+                    <div class="episode_card">
+
+                        <img src="./Images/episode11.jpg" data-src="./Images/episode11.jpg" alt="">
+                        <div class="episode_details">
+                            <button class="e-playBtn gradient-border">
+                                <div class="e-triangle"></div>
+                        </button>
+                        <h3 class="episode_title">E11 Ofentse Pitse</h3>
+                        <p class="chessmasters">Chess Masters</p>
+                        <p class="episode-metadata">September 20, 2023  Episode 11</p>
+                    </div>
+                </div>
+                <div class="episode_card">
+                        <img src="./Images/episode12.png" data-src="./Images/episode12.png" alt="">
+                        <div class="episode_details">
+                            <button class="e-playBtn gradient-border">
+                                <div class="e-triangle"></div>
+                            </button>
+                            <h3 class="episode_title">E12 Chita Mumba Zulu</h3>
+                            <p class="chessmasters">Chess Masters</p>
+                            <p class="episode-metadata">September 20, 2023  Episode 12</p>
+                        </div>
+                    </div>
+                    <div class="episode_card">
+                        <img src="./Images/episode13.png"data-src="./Images/episode13.png" alt="">
+                        <div class="episode_details">
+                            <button class="e-playBtn gradient-border">
+                                <div class="e-triangle"></div>
+                            </button>
+                            <h3 class="episode_title">E13 Omar Degan</h3>
+                            <p class="chessmasters">Chess Masters</p>
+                            <p class="episode-metadata">September 20, 2023  Episode 13</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="blog_section">
+                <div class="blog_container">
+                    <h1 class="blog_title reveal reveal-left">New Blog Post</h1>
+                    <p class="blog_desc reveal reveal-left">Vania Leles: Restoring Africa’s Heritage, One Diamond at a Time.</p>
+                    <button type="button" class="button reveal reveal-left gradient-border">READ MORE</button>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="instagram_section">
+                <h2 class="IG_header reveal reveal-left">Follow us On Instagram</h2>
+                <div class="insta_content reveal reveal-right">
+                    <img src="./Images/Link1.jpg" data-src="./Images/Link1.jpg" alt="" class="insta_image">
+                    <img src="./Images/Link2.jpg" data-src="./Images/Link2.jpg" alt="" class="insta_image">
+                    <img src="./Images/Link3.jpg" data-src="./Images/Link3.jpg" alt="" class="insta_image">
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="news_section">
+                <div class="news_left reveal reveal-left">
+                    <div class="news_texts">
+                        <h2>Sign up for our newsletter!</h2>
+                        <p>Get notified about updates and be the first to get early access to new episodes.</p>
+                    </div>
+                </div>
+                <div class="news_form reveal reveal-right">
+                    <div class="ninputs">
+                        <input type="text" name="first-name" placeholder="Enter Your First Name" id="">
+                        <input type="text" name="last-name" placeholder="Enter Your Last Name" id="">
+                        <input type="email" name="email" placeholder="Enter Your Email Address" id="">
+                    </div>
+                    <div class="nbutton_box">
+                        <button type="button" class="button gradient-border">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_contents">
+                <div class="footer_top">
+                    <div class="top p1 reveal reveal-left">
+                        <img src="./Images/7c9122feb1fe8ab7cd3b3d92067972f02876684c.png" alt="">
+                        <p>Navigating the intricate landscapes of business, culture and global influence from the African perspective.</p>
+                    </div>
+                    <div class="top p2 reveal reveal-right">
+                        <h3>QUICK LINKS</h3>
+                        <ul class="footer_links">
+                            <li><a href="">About Lee Kasumba</a></li>
+                            <li><a href="">Season 1 – Chess Masters</a></li>
+                            <li><a href="">Season 2 – The Visionary’s Gambit</a></li>
+                            <li><a href="">She Speaks Africa</a></li>
+                            <li><a href="./Contact.html">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                    <div class="top p3 reveal reveal-left">
+                        <h3>GET IN TOUCH</h3>
+                        <div class="contacts">
+                            <p>lee@theafricawhisperer.com</p>
+                            <p>producer@theafricawhisperer.com</p>
+                            <p>partnership@theafricawhisperer.com</p>
+                            
+                            <p>media@theafricawhisperer.com</p>
+                        </div>
+                    </div>
+                    <div class="top p4 reveal reveal-right">
+                        <h3>SUBSCRIBE AND FOLLOW US</h3>
+                        <div class="socials_icons">
+                            <img src="./Images/Twitter.png" alt=""class="social_icon">
+                            <img src="./Images/Linkedin-icon-wrapper.png" alt="" class="social_icon gradient-border">
+                            <img src="./Images/Instagram-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/Apple Podcast2.png" alt="" class="social_icon">
+                            <img src="./Images/Google Podcast.png" alt="" class="social_icon">
+                            <img src="./Images/Spotify2.png" alt="" class="social_icon">
+                            <img src="./Images/Pocket Cast-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/Player FM-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/iheart-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/Youtube-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/Amazon Music-icon-wrapper.png" alt="" class="social_icon">
+                            <img src="./Images/Afripods-icon-wrapper.png" alt="">
+                        </div>
+                        <div class="icons2">
+                            <img src="./Images/Iono2.png" alt="" class="social_icon2">
+                            <img src="./Images/Audible2.png" alt="" class="social_icon2">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer_bottom ">
+                    <p class="reveal reveal-left">Copyright © 2023 The Africa Whisperer – All Rights Reserved.</p>
+                    <p class="reveal reveal-right">Powered by KoneWeb</p>
+                </div>
+            </div>
+        </footer>
+        <div id="popup-overlay" class="popup-overlay hidden">
+        <div class="popup-box">
+            <button class="close-popup" id="close-popup-btn">&times;</button>
+            <div class="form-panel">
+                <img src="./Images/Logo-green.svg.svg" class="sinlog_img form_img" alt="">
+                <div class="form-container">
+                    <form id="login-form" class="form">
+                        <h2>Login</h2>
+                        <div class="input-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="gradient-border">Login</button>
+                        <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                    </form>
+                    <form id="signup-form" class="form hidden">
+                        <h2>Sign Up</h2>
+                        <div class="input-group">
+                            <label for="signup-username">Username</label>
+                            <input type="text" id="signup-username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <button type="submit" class="gradient-border">Sign Up</button>
+                        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./AW.js"></script>
+</body>
+</html>
