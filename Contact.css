@@ -856,6 +856,7 @@ footer a,p{
 .form h2 {
     margin-bottom: 1.5rem; 
     color: #044750;
+    font-weight:600;
 }
 .input-group{
     margin-bottom: 1.5rem;
