@@ -368,14 +368,13 @@ volBtn.addEventListener("click", () => {
         setTimeout(() => {
             vsbox.style.opacity = '1';
             volSlider.style.opacity = '1';
-        }, 400);
+        }, 600);
     } else {
-        vsbox.style.opacity = '0';
         volSlider.style.opacity = '0';
         setTimeout(() => {
             vsbox.style.display = 'none';
             volSlider.style.display = 'none';
-        }, 400); 
+        }, 500); 
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
