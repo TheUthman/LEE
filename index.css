@@ -1123,7 +1123,6 @@ footer a,p{
 }
 .icons2{
     display: flex;
-    flex-direction: column;
 }
 .socials_icons2{
     flex: 0 0 50%;
