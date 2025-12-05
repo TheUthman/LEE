@@ -404,26 +404,6 @@ const setVolume = (v) => {
         volBtn.classList.remove('muted');
     }
 };
-
-const volumeUp = () => setVolume((audio.volume || 0) + 0.1);
-const volumeDown = () => setVolume((audio.volume || 0) - 0.1);
-
-document.addEventListener('keydown', (e) => {
-    const key = e.key;
-    const code = e.code;
-
-    if (key === 'F9' || code === 'AudioVolumeUp' || key === 'VolumeUp' || key === 'AudioVolumeUp') {
-        if (key === 'F9') e.preventDefault();
-        volumeUp();
-        return;
-    }
-    if (key === 'F8' || code === 'AudioVolumeDown' || key === 'VolumeDown' || key === 'AudioVolumeDown') {
-        if (key === 'F8') e.preventDefault();
-        volumeDown();
-        return;
-    }
-});
-
 // repeat button behavior
 let repeatMode = 0;
 
