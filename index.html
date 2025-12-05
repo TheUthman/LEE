@@ -76,9 +76,14 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                                 <audio id="audio" src="./Audio.mp3">
                                 </audio>
                                 <button type="button" class="skip-btn" id="backward-btn">-15</button>
-                                <button type="button" class="play-btn gradient-border" id="playBtn">.
-                                    <div class="triangle"></div>
-                                    <img src="./Images/PlayIcon.png" alt="" class="play-icon">
+                                <button type="button" class="play-btn gradient-border" id="playBtn">
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" class="triangle" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 4L18 12L6 20V4Z" fill="#FFFFFF"/>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="play-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="6" y="4" width="4" height="16" fill="#FFFFFF"/>
+                                        <rect x="14" y="4" width="4" height="16" fill="#FFFFFF"/>
+                                    </svg>
                                 </button>
                                 <button type="button" class="skip-btn" id="forward-btn">+15</button>
                                 <input placeholder="0" type="range" id="seek" value="0" min="0" max="100">
@@ -94,7 +99,10 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                                             <path d="M48 16c4 4 6 9.3 6 14s-2 10-6 14" stroke="#000" stroke-width="2" fill="none"/>
                                         </svg>
                                     </button>
-                                    <input placeholder="." type="range" id="volSlider" min="0" max="1" step="0.01" value="1">
+                                    <div id="vsbox">
+                                        <p class="volLabel"></p>
+                                        <input placeholder="." type="range" id="volSlider" min="0" max="1" step="0.01" value="1">
+                                    </div>
                                 </div>
                                 <button type="button" class="skip-btn" id="repeat-btn">1x</button>
                                 </div>
@@ -142,7 +150,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                     <div class="episode_card">
                         <img src="./Images/episode9.png" data-src="./Images/episode9.png" alt="">
                         <div class="episode_details">
-                            <button class="e-playBtn gradient-border">
+                            <button type="button" class="e-playBtn gradient-border">.
                                 <div class="e-triangle"></div>
                             </button>
                             <h3 class="episode_title">E09 Eric Kaduru</h3>
@@ -153,7 +161,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                     <div class="episode_card">
                         <img src="./Images/episode10.png" data-src="./Images/episode10.png" alt="">
                         <div class="episode_details">
-                            <button class="e-playBtn gradient-border">
+                            <button type="button" class="e-playBtn gradient-border">.
                                 <div class="e-triangle"></div>
                             </button>
                             <h3 class="episode_title">E10 Agnes Soyode-Johnson</h3>
@@ -165,7 +173,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
 
                         <img src="./Images/episode11.jpg" data-src="./Images/episode11.jpg" alt="">
                         <div class="episode_details">
-                            <button class="e-playBtn gradient-border">
+                            <button type="button" class="e-playBtn gradient-border">.
                                 <div class="e-triangle"></div>
                         </button>
                         <h3 class="episode_title">E11 Ofentse Pitse</h3>
@@ -176,7 +184,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                 <div class="episode_card">
                         <img src="./Images/episode12.png" data-src="./Images/episode12.png" alt="">
                         <div class="episode_details">
-                            <button class="e-playBtn gradient-border">
+                            <button type="button" class="e-playBtn gradient-border">.
                                 <div class="e-triangle"></div>
                             </button>
                             <h3 class="episode_title">E12 Chita Mumba Zulu</h3>
@@ -187,7 +195,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                     <div class="episode_card">
                         <img src="./Images/episode13.png"data-src="./Images/episode13.png" alt="">
                         <div class="episode_details">
-                            <button class="e-playBtn gradient-border">
+                            <button type="button" class="e-playBtn gradient-border">.
                                 <div class="e-triangle"></div>
                             </button>
                             <h3 class="episode_title">E13 Omar Degan</h3>

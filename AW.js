@@ -360,14 +360,40 @@ document.addEventListener("keydown", (e) => {
 })
 
 volBtn.addEventListener("click", () => {
+    const vsbox = document.getElementById('vsbox')
     const currentDisplay = window.getComputedStyle(volSlider).display;
     if (currentDisplay === "none") {
+        vsbox.style.display = "flex";
         volSlider.style.display = "block";
+        setTimeout(() => {
+            vsbox.style.opacity = '1';
+            volSlider.style.opacity = '1';
+        }, 400);
     } else {
-        volSlider.style.display = "none";
+        vsbox.style.opacity = '0';
+        volSlider.style.opacity = '0';
+        setTimeout(() => {
+            vsbox.style.display = 'none';
+            volSlider.style.display = 'none';
+        }, 400); 
     }
 });
-
+document.addEventListener('DOMContentLoaded', () => {
+    const volSlider = document.getElementById('volSlider');
+    const volLabel = document.querySelector('.volLabel');
+    function updateVolumeDisplay(slider) {
+        const value = slider.value;
+        const min = slider.min;
+        const max = slider.max;
+        const percentage = Math.round(((value - min) / (max - min)) * 100);
+        slider.style.setProperty('--fill-percentage', `${percentage}%`);
+        volLabel.textContent = `${percentage}%`;
+    }
+    volSlider.addEventListener('input', (event) => {
+        updateVolumeDisplay(event.target);
+    });
+    updateVolumeDisplay(volSlider);
+});
 const setVolume = (v) => {
     const newVol = Math.max(0, Math.min(1, v));
     audio.volume = newVol;

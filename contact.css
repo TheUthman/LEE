@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Contact.css
 @font-face {
     font-family: 'Alternate Gothic';
     src:url('./Fonts/Alternate\ Gothic\ No3\ D\ Regular.otf'),format('opentype');
@@ -910,7 +909,7 @@ footer a,p{
     background: #00A8B5;
     color: #fff;
     font-weight: bold;
-=======
+}
 @font-face {
     font-family: 'Alternate Gothic';
     src:url('./Fonts/Alternate\ Gothic\ No3\ D\ Regular.otf'),format('opentype');
@@ -1290,7 +1289,7 @@ header.sticky {
     text-align: center;
 }
 /* ===========================
-   SECTION 2 — WRAPPER
+    SECTION 2 — WRAPPER
 =========================== */
 .section2{
     width: 100%;
@@ -1821,5 +1820,4 @@ footer a,p{
     background: #00A8B5;
     color: #fff;
     font-weight: bold;
->>>>>>> 35dc2868945bbfdbe6f7e41113f063af17c49fa0:contact.css
 }
