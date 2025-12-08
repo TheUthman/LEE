@@ -189,10 +189,10 @@ menuBtn.addEventListener("click", () => {
         document.querySelectorAll(".links_box ul li a").forEach(a => {
         a.style.fontSize = "1.5rem"
         });
-    hb.style.width = ("9.5rem");
+    hb.style.width = ("9rem");
     hb.style.height = ("2.5rem");
     hb.style.marginLeft = ("40px");
-    hb.style.fontSize = "1.5rem"
+    hb.style.fontSize = "1.4rem"
     linksBox.style.backgroundColor = ("#FFFFFF")
     linksBox.style.position = "absolute";
     linksBox.style.top = rect.bottom + "px";

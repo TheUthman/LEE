@@ -75,7 +75,8 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                             <div class="aplayer">
                                 <audio id="audio" src="./02 The Box - (SongsLover.com).mp3">
                                 </audio>
-                                <button type="button" class="skip-btn" id="backward-btn">-15</button>
+                                <div class="controls">
+                                    <button type="button" class="skip-btn" id="backward-btn">-15</button>
                                 <button title="playBtn" type="button" class="play-btn gradient-border" id="playBtn">
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" class="triangle" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 4L18 12L6 20V4Z" fill="#FFFFFF"/>
@@ -86,6 +87,7 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                                     </svg>
                                 </button>
                                 <button type="button" class="skip-btn" id="forward-btn">+15</button>
+                                </div>
                                 <input placeholder="0" type="range" id="seek" value="0" min="0" max="100">
                                 <div class="player2">
                                     <p id="time"><span id="current_time">0:00</span> &nbsp; / <span id="duration">&nbsp;3:00</span>
@@ -234,12 +236,14 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                 </div>
                 <div class="news_form reveal reveal-right">
                     <div class="ninputs">
-                        <input type="text" name="first-name" placeholder="Enter Your First Name" id="">
-                        <input type="text" name="last-name" placeholder="Enter Your Last Name" id="">
-                        <input type="email" name="email" placeholder="Enter Your Email Address" id="">
+                        <div class="input-wrapper"><input type="text" name="first-name" placeholder="Enter Your First Name" autocomplete="given-name" id=""></div>
+                        <div class="input-wrapper"><input type="text" name="last-name" placeholder="Enter Your Last Name" autocomplete="family-name" id=""></div>
+                        <div class="input-wrapper"><input type="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" id=""></div>
                     </div>
                     <div class="nbutton_box">
-                        <button type="button" class="button gradient-border">SUBSCRIBE</button>
+                        <div class="btn-wrap">
+                            <button type="button" class="button gradient-border">SUBSCRIBE</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,11 +314,11 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                         <h2>Login</h2>
                         <div class="input-group">
                             <label for="login-email">Email</label>
-                            <input type="email" id="login-email" required>
+                            <input type="email" id="login-email" autocomplete="email" required>
                         </div>
                         <div class="input-group">
                             <label for="login-password">Password</label>
-                            <input type="password" id="login-password" required>
+                            <input type="password" id="login-password" autocomplete="off" required>
                         </div>
                         <button type="submit" class="gradient-border">Login</button>
                         <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
@@ -323,15 +327,15 @@ that promises to captivate and enlighten. Tune in now and join us on this exciti
                         <h2>Sign Up</h2>
                         <div class="input-group">
                             <label for="signup-username">Username</label>
-                            <input type="text" id="signup-username" required>
+                            <input type="text" id="signup-username" autocomplete="username" required>
                         </div>
                         <div class="input-group">
                             <label for="signup-email">Email</label>
-                            <input type="email" id="signup-email" required>
+                            <input type="email" id="signup-email" autocomplete="email" required>
                         </div>
                         <div class="input-group">
                             <label for="signup-password">Password</label>
-                            <input type="password" id="signup-password" required>
+                            <input type="password" id="signup-password" autocomplete="off" required>
                         </div>
                         <button type="submit" class="gradient-border">Sign Up</button>
                         <p>Already have an account? <a href="#" id="show-login">Login</a></p>
