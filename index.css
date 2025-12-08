@@ -71,6 +71,7 @@ body{
     min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Alternate Gothic';
+    overflow-x: hidden;
 }
 section {
     width: 100%;
