@@ -12,6 +12,7 @@
     font-style: normal;
     font: optional;
 }
+/*player*/
 :root {
     --primary-color: #00A8B5;
     --track-color: #404040; 
@@ -23,6 +24,8 @@
     --ease-1: cubic-bezier(.22,.9,.28,1);
     --ease-2: cubic-bezier(.16,.84,.44,1);
     --ease-smooth: cubic-bezier(.25,.8,.25,1);
+    --color-accent-gold: #D9A300;
+    --color-accent-coral: #FF6F61;
 }
 .reveal {
     opacity: 0;
@@ -168,7 +171,11 @@ img{
     inset: 0;
     padding: 2px; 
     border-radius: inherit;
-    background: linear-gradient(90deg,#FFD700,#00A8B5,#E87A38);
+    background: linear-gradient(
+    90deg,
+    var(--color-accent-gold),
+    var(--color-accent-coral)
+  );
     mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
@@ -514,7 +521,7 @@ header.sticky {
 }
 .controls{
     display: flex;
-    gap: 15%;
+    gap: 5%;
     flex: 0 0 20%;
     justify-content: center;
 }
@@ -656,7 +663,6 @@ header.sticky {
 }
 #volSlider {
     width: 120px;
-    display: none; 
     transition: opacity 0.5s ease, transform 0.5s ease; 
     -webkit-appearance: none;
     appearance: none;
@@ -751,7 +757,7 @@ header.sticky {
     background-color: transparent;
     border: none;
     font-family: 'Rubik';
-    flex: 0 0 2%;
+    flex: 0 0 30%;
 }
 #repeat-btn{
     /* background-color: transparent; */
@@ -873,7 +879,7 @@ header.sticky {
     gap: 0.3rem;
     scroll-behavior: smooth;    
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    /* overflow: ; */
     margin: 2rem 0;
 }
 .episode_card{
@@ -1121,6 +1127,12 @@ header.sticky {
     color: #FFFFFF;
     cursor: pointer;
     
+}
+.news_form button:hover{
+    background-color: #008B9D;
+    transition: all 0.4s ease;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
 }
 footer{
     width: 100%;

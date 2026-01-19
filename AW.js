@@ -1,15 +1,5 @@
 (function () {
     'use strict';
-
-    /**
-     * =================================================================
-     * 1. Global Error Handling Setup
-     * - Wraps EventTarget.prototype.addEventListener
-     * - Catches global 'error' and 'unhandledrejection' events
-     * =================================================================
-     */
-
-    // Helper to wrap callbacks in try/catch for robust event handling
     const safeCb = (fn) => {
         if (typeof fn !== 'function') return fn;
         return function (...args) {
@@ -70,33 +60,6 @@
             // --- Helper Functions ---
 
             /**
-             * Formats an award quote by animating word by word.
-             */
-            const initQuoteAnimation = () => {
-                const awardQuotes = {
-                    2021: "Where African voices met global thought",
-                    2022: "A platform that redefined honest conversation",
-                    2023: "Amplifying minds that move culture forward",
-                    2024: "Stories shape how the world sees Africa — and how Africa sees itself",
-                    2025: "Ideas worth listening to — voices worth remembering"
-                };
-
-                const year = new Date().getFullYear();
-                const quoteText = awardQuotes[year] || awardQuotes[2025];
-
-                if (!quoteEl) return;
-
-                quoteEl.innerHTML = "";
-                quoteText.split(" ").forEach((word, i) => {
-                    const span = document.createElement("span");
-                    span.className = "quote-word";
-                    span.textContent = word;
-                    span.style.animationDelay = `${i * 0.08}s`;
-                    quoteEl.appendChild(span);
-                });
-            };
-
-            /**
              * Sets up a generic scroll reveal using IntersectionObserver.
              */
             const setupIntersectionReveal = (elements, threshold = 0.2, className = 'show') => {
@@ -111,6 +74,8 @@
 
                 elements.forEach(el => revealOnScroll.observe(el));
             };
+
+            
 
             // --- Popup Logic ---
 
@@ -136,10 +101,25 @@
             };
 
             // --- Event Listeners and Initialization ---
+            //awards reveal
+            const revealEls = document.querySelectorAll('.reveal');
 
-            // 1. BLOG QUOTE ANIMATION
-            initQuoteAnimation();
+            const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+                }
+                });
+            },
+            {
+                threshold: 0.15,
+    rootMargin: '0px 0px -10% 0px'
+  }
+);
 
+revealEls.forEach(el => observer.observe(el));
             // 2. PAGE ANIMATION (IntersectionObserver)
             setupIntersectionReveal([...reveals, ...logos], 0.2, 'show');
 
